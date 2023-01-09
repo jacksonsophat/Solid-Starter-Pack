@@ -10,7 +10,7 @@ const App: Component = () => {
         This is the setup for Solid with styles:
       </h1>
       <div class="my-4">
-        <p class='my-2'>Tailwind css</p>
+        <h2 class='my-2 font-bold'>Tailwind css</h2>
         {/* <p class='my-2'>Tailwind css</p> */}
       </div>
     </div>
