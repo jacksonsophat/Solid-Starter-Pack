@@ -1,19 +1,30 @@
 import type { Component } from 'solid-js';
+import { Routes, Route, A, useRoutes } from "@solidjs/router"
+import { Suspense } from 'solid-js';
+import { lazy } from 'solid-js';
+import { MyRoutes } from './components/Routes'
 
-import logo from './logo.svg';
-import styles from './App.module.css';
+// Components
+const Footer = lazy(() => import('./components/Footer'))
+const Header = lazy(() => import('./components/Header'))
+// const routes
+
+// pages
+const Home = lazy(() => import('./pages/Home'))
+const AboutUs = lazy(() => import('./pages/AboutUs'))
 
 const App: Component = () => {
+
   return (
-    <div>
-      <h1 class="text-3xl font-bold underline bg-purple-50 py-5">
-        This is the setup for Solid with styles:
-      </h1>
-      <div class="my-4">
-        <h2 class='my-2 font-bold'>Tailwind css</h2>
-        {/* <p class='my-2'>Tailwind css</p> */}
+    <main>
+      <Header />
+      {/* <Routes /> */}
+      <div id='page-content'>
+        <MyRoutes />
       </div>
-    </div>
+
+      <Footer />
+    </main>
   );
 };
 
