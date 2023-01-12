@@ -17,13 +17,13 @@ const App: Component = () => {
 
   return (
     <main>
-      <Header />
+      {/* <Header /> */}
       {/* <Routes /> */}
       <div id='page-content'>
         <MyRoutes />
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };
